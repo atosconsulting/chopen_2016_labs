@@ -1,0 +1,11 @@
+= LAB 04: Don't panic!
+
+In this lab we see how fault tolerance is implemented by Hystrix. We will need to provide a fallback method to make the `OrderResourceTest` pass.
+
+== Steps
+
+. Implement fallback method which will simply response with `accepted()` status
+. Bind it as fallback for Hystrix (http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html:[have a look here if in doubt])
+. Check if the test is green
+
+
