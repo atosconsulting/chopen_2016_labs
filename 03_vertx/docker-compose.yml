@@ -1,0 +1,11 @@
+version: '2'
+services:
+  inventory_mongo:
+    image: mongo
+    network_mode: "host"
+    command: "mongod --rest --httpinterface"
+  inventory:
+    image: chopen/03_vertx:latest
+    network_mode: "host"
+    depends_on:
+     - inventory_mongo
