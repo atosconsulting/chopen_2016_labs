@@ -2,6 +2,7 @@ package ch.open.chef.orders
 
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.annotation.JsonInclude.Include.NON_EMPTY
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpEntity
 import org.springframework.http.HttpHeaders
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.client.RestTemplate
 
 @RestController
-open class OrderResource {
+class OrderResource {
 
     @Autowired
     lateinit var orderService: OrderService
@@ -30,6 +31,7 @@ open class OrderResource {
 @Component
 open class OrderService {
 
+    @HystrixCommand(fallbackMethod = "printOrder")
     open fun orderInKitchen(@RequestBody orders: List<Order>): ResponseEntity<Void> {
         val restTemplate = RestTemplate()
 
@@ -38,6 +40,10 @@ open class OrderService {
         headers.accept = listOf(APPLICATION_JSON)
 
         restTemplate.postForLocation("http://localhost:8080/v1/menus", HttpEntity<List<Order>>(orders, headers))
+        return ResponseEntity.accepted().build()
+    }
+
+    open fun printOrder(orders: List<Order>): ResponseEntity<Void> {
         return ResponseEntity.accepted().build()
     }
 
