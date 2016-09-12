@@ -1,0 +1,14 @@
+version: '2'
+services:
+  kpostgres:
+    image: postgres:9.5
+    privileged: true
+    ports:
+     - "5432:5432"
+    environment:
+     - POSTGRES_USER=kitchen
+     - POSTGRES_PASSWORD=kitchen
+     - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+     - "./docker/data/postgres:/var/lib/postgresql/data/pgdata"
+

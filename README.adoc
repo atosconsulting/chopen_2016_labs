@@ -1,0 +1,10 @@
+= Microservices Labs
+
+Please open a terminal and type
+
+[source,bash]
+----
+$ git clone https://github.com/atosconsulting/chopen_2016_labs.git
+----
+
+to get the lab source code. Individual lab descriptions are in the dedicated folders.

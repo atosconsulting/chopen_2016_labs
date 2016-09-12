@@ -1,0 +1,28 @@
+---
+logger:
+  level: DEBUG
+database:
+  connection:
+    url: jdbc:postgresql://localhost:5432/kitchen
+    user: kitchen
+    password: kitchen
+
+---
+project:
+  stage: development
+logger:
+  level: DEBUG
+database:
+  connection:
+    url: jdbc:postgresql://localhost:5432/kitchen
+    user: kitchen
+    password: kitchen
+
+---
+project:
+  stage: production
+logger:
+  level: INFO
+database:
+  connection:
+    url: postgres.service.consul

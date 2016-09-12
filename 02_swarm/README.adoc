@@ -1,0 +1,12 @@
+= LAB 02: Wildfly Swarm
+
+The goal of this lab is to get a first glimpse at Wildfly Swarm. To do so, we will add a health check to the current Kitchen service.
+
+== Steps
+
+* Navigate your terminal to this folder and run `docker-compose up`. This will start a PostgreSQL database
+* The `kitchen` folder contains the simplified service code. Import it in your IDE of choice (it's a Maven project).
+* Have a look at the application. You can navigate a new console into the `kitchen` folder and run `mvn wildfly-swarm:run` to start the server.
+* Add a DB healthcheck. You can have a look how this is done in the http://goo.gl/hcDC5M[Wildfly Swarm manual].
+
+
