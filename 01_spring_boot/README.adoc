@@ -1,0 +1,13 @@
+= LAB 01: Getting Started with Spring Boot and Kotlin
+
+In this lab we will write our first REST resource using `spring-boot` and `Kotlin` language. The goal is to make `TableResourceTest.kt` pass.
+
+== Steps
+
+. Implement `TableResource` which is a Spring `@RestController` (have a look https://spring.io/guides/gs/rest-service/[here] for more details)
+.. Create a new class or embed it directly in the `Application.kt`
+.. It should have one method exposed under `/tables` URI which returns list of IDs when `GET` is called
+.. Run `TableResourceTest` from your IDE (or by invoking `./gradlew build`) to prove it works
+. Start your microservice as a regular Java process and invoke `$ curl -i 'http://localhost:8080/tables'`
+
+

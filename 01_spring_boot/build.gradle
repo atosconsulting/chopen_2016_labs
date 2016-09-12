@@ -1,0 +1,54 @@
+buildscript {
+	ext {
+		springBootVersion = '1.4.0.RELEASE'
+		kotlinVersion = '1.0.3'
+		springCloudVersion = 'Brixton.SR5'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
+		classpath('se.transmode.gradle:gradle-docker:1.2')
+	}
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'docker'
+
+jar {
+	baseName = 'orders'
+	version = '1.0.0-SNAPSHOT'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-web') {
+		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+	}
+	compile ('org.springframework.boot:spring-boot-starter-jetty') {
+		exclude group: 'org.eclipse.jetty.websocket'
+	}
+
+	compile("org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}")
+	compile("com.fasterxml.jackson.module:jackson-module-kotlin:2.8.2")
+
+	testCompile("org.jetbrains.kotlin:kotlin-test:${kotlinVersion}")
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile('io.rest-assured:rest-assured:3.0.1')
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '3.0'
+}
