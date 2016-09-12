@@ -1,0 +1,14 @@
+= LAB 03: Dockerize all the things!
+
+In this lab we will build `vertx` microservice in the docker container.
+
+== Steps
+
+. Build `vertx` fat jar. Invoke `$ ./gradlew shadowJar`
+. Start `mongodb` container as a daemon (don't forget to make it visible for the outside world - `--net=host`)
+. Build docker container with `vertx` verticles using Gradle
+. Start the container
+. Run smoke test scripts (`./checkout_*.sh`)
+. Bonus: create `docker-compose` file to write `vertx` verticles and `mongodb` instance together.
+
+

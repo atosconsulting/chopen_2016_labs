@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Yeast",
+    "stockId": "SKU01002",
+    "amount": 2
+  },
+  {
+    "name": "Milk",
+    "stockId": "SKU01042",
+    "amount": 8
+  },
+  {
+    "name": "Butter",
+    "stockId": "SKU01062",
+    "amount": 100
+  },
+  {
+    "name": "Eggs",
+    "stockId": "SKU32987",
+    "amount": 100
+  },
+  {
+    "name": "Chicken Stock",
+    "stockId": "SKU86575",
+    "amount": 100
+  },
+  {
+    "name": "Peas",
+    "stockId": "SKU45825",
+    "amount": 500
+  },
+  {
+    "name": "Chicken breast",
+    "stockId": "SKU94773",
+    "amount": 100
+  }
+]

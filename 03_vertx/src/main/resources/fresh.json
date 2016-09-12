@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Flour",
+    "stockId": "SKU98575",
+    "amount": 1000
+  },
+  {
+    "name": "Sugar",
+    "stockId": "SKU01032",
+    "amount": 10
+  },
+  {
+    "name": "Salt",
+    "stockId": "SKU01052",
+    "amount": 100
+  },
+  {
+    "name": "Peas",
+    "stockId": "SKU45825",
+    "amount": 1000
+  },
+  {
+    "name": "Tarragon",
+    "stockId": "SKU28943",
+    "amount": 100
+  },
+  {
+    "name": "Olive oil",
+    "stockId": "SKU55712",
+    "amount": 100
+  },
+  {
+    "name": "Thyme",
+    "stockId": "SKU78923",
+    "amount": 100
+  },
+  {
+    "name": "Lemon",
+    "stockId": "SKU11954",
+    "amount": 100
+  }
+]
