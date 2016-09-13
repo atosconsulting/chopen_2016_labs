@@ -9,4 +9,4 @@ The goal of this lab is to get a first glimpse at Wildfly Swarm. To do so, we wi
 * Have a look at the application. You can navigate a new console into the `kitchen` folder and run `mvn wildfly-swarm:run` to start the server.
 * Add a DB healthcheck. You can have a look how this is done in the http://goo.gl/hcDC5M[Wildfly Swarm manual].
 
-
+Access the Swagger UI under http://localhost:8080/swagger-ui/?url=/swagger.json#!/menus/order
