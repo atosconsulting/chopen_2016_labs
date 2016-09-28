@@ -8,3 +8,7 @@ $ git clone https://github.com/atosconsulting/chopen_2016_labs.git
 ----
 
 to get the lab source code. Individual lab descriptions are in the dedicated folders.
+
+= Slides
+
+We have published slides from the workshop as github-pages. https://atosconsulting.github.io/chopen_2016_labs/index.html:[Available here]
